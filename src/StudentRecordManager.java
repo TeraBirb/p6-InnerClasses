@@ -18,7 +18,7 @@ public class StudentRecordManager {
     }
 
     public Student searchByID(int id) {     // use iterator instance method
-
+        return students.get(id); // temp
     }
 
     public void printTranscript(Student student) {  // use student getters and inner class

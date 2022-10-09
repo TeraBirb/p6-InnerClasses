@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class StudentRecordManager {
 
@@ -16,8 +17,20 @@ public class StudentRecordManager {
 
     }
 
-    public Student searchByID(int id) {
+    public Student searchByID(int id) {     // use iterator instance method
 
+    }
+
+    public void printTranscript(Student student) {  // use student getters and inner class
+        System.out.println();
+    }
+
+    public void printAllTranscripts() { // use inner class
+
+    }
+
+    public Iterator<Student> iterator() {
+        return students.iterator();
     }
 
     private class TranscriptPrinter {

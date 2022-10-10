@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Student {
 
-    ArrayList<Course> courses = new ArrayList<>();
+    private ArrayList<Course> courses = new ArrayList<>();
     private String firstName;
     private String secondName;
     private int ID;

@@ -13,20 +13,29 @@ public class StudentRecordManager {
         students.remove(index);
     }
 
-    public void addStudent() {      // constructor-ish
-
+    public void addStudent(String firstName, String secondName, int ID) {
+        students.add(new Student(firstName, secondName, ID));
     }
 
-    public Student searchByID(int id) {     // use iterator instance method
-        return students.get(id); // temp
+    public Student searchByID(int id) {
+
+        while (this.iterator().hasNext()) {
+            Student s = this.iterator().next();
+            if (s.getID() == id) {
+                return s;
+            }
+        }
+
+        return null;
+
     }
 
     public void printTranscript(Student student) {  // use student getters and inner class
-        System.out.println();
+        new TranscriptPrinter().print(student);
     }
 
     public void printAllTranscripts() { // use inner class
-
+        new TranscriptPrinter().printAll();
     }
 
     public Iterator<Student> iterator() {
@@ -34,6 +43,25 @@ public class StudentRecordManager {
     }
 
     private class TranscriptPrinter {
+
+        // single print
+        public void print(Student student) {
+            System.out.println(student.getFirstName() + " " + student.getSecondName() + " " + student.getID());
+            for ( Course course : student.courses) {
+                System.out.println(course.getName() + " Grade: " + course.getGrade());
+            }
+        }
+
+        // all print
+        public void printAll() {
+            for (Student student : students) {
+                System.out.println(student.getFirstName() + " " + student.getSecondName() + " " + student.getID());
+                for (Course course : student.courses) {
+                    System.out.println(course.getName() + " Grade: " + course.getGrade());
+                }
+                System.out.println("-----");
+            }
+        }
 
     }
 

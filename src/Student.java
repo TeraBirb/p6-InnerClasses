@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Student {
 
-    private ArrayList<Course> courses = new ArrayList<>();
+    ArrayList<Course> courses = new ArrayList<>();
     private String firstName;
     private String secondName;
     private int ID;
@@ -31,8 +31,18 @@ public class Student {
         return ID;
     }
 
-    public void addCourse(String name, Course.Grade Grade) {   // use
+    public void addCourse(String name, Course.Grade Grade) {
         courses.add(new Course(name, Grade));
+    }
+
+    public ArrayList<Course> getCourses() {
+        return courses;
+    }
+
+    public Student (String firstName, String secondName, int ID) {
+        this.firstName = firstName;
+        this.secondName = secondName;
+        this.ID = ID;
     }
 
 

@@ -47,9 +47,9 @@ public class StudentRecordManager {
 
         // single print
         public void print(Student student) {
-            System.out.println(student.getFirstName() + " " + student.getSecondName() + " " + student.getID());
+            System.out.println(student);
             for (Course course : student.getCourses()) {
-                System.out.println(course.getName() + " Grade: " + course.getGrade());
+                System.out.println(course);
             }
             System.out.println();
         }
@@ -57,9 +57,9 @@ public class StudentRecordManager {
         // all print
         public void printAll() {
             for (Student student : students) {
-                System.out.println(student.getFirstName() + " " + student.getSecondName() + " " + student.getID());
+                System.out.println(student);
                 for (Course course : student.getCourses()) {
-                    System.out.println(course.getName() + " Grade: " + course.getGrade());
+                    System.out.println(course);
                 }
                 System.out.println("-----");
             }

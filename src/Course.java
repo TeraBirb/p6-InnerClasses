@@ -11,6 +11,10 @@ public class Course {
         return grade;
     }
 
+    public String toString() {
+        return name + " Grade: " + grade;
+    }
+
     public Course(String name, Grade grade) {
         this.name = name;
         this.grade = grade;
@@ -21,7 +25,7 @@ public class Course {
         B,
         C,
         D,
-        F
+        F;
     }
 
 }

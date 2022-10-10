@@ -40,7 +40,7 @@ public class Student {
     }
 
     public String toString() {
-        return firstName + " " + secondName + " " + ID;
+        return firstName + " " + secondName + " #" + ID;
     }
 
     public Student (String firstName, String secondName, int ID) {

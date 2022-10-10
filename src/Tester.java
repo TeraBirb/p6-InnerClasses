@@ -14,12 +14,17 @@ public class Tester {
         testSRM.addStudent("Marc", "Soucherburgh", 2865);
         testSRM.getStudent(4).addCourse("CIS 6", Course.Grade.F);
 
+        System.out.println("Printing student 8237 transcript:");
         testSRM.printTranscript(testSRM.searchByID(8237));
+        System.out.println("Printing all transcripts:");
         testSRM.printAllTranscripts();
 
-        System.out.println(testSRM.searchByID(2865));
-//        testSRM.removeStudent(4);
-//        testSRM.printAllTranscripts();
+        System.out.println("Printing searchByID 1031:");
+        System.out.println(testSRM.searchByID(1031));
+        System.out.println("Removing student at index 4");
+        testSRM.removeStudent(4);
+        System.out.println("Printing all transcripts:");
+        testSRM.printAllTranscripts();
 
     }
 

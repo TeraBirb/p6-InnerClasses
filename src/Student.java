@@ -39,6 +39,10 @@ public class Student {
         return courses;
     }
 
+    public String toString() {
+        return firstName + " " + secondName + " " + ID;
+    }
+
     public Student (String firstName, String secondName, int ID) {
         this.firstName = firstName;
         this.secondName = secondName;
